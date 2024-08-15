@@ -22,4 +22,4 @@ const getProductByCategory = (categoryId: number) =>
   },
  });
 
-export { factory, getProductByCategory };
+export { db, getProductByCategory };
