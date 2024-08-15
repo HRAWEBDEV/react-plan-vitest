@@ -54,12 +54,12 @@ describe('Products list', () => {
 
  it('should remove the loading indicator after data is fetched', async () => {
   render(<ProductList />, { wrapper: AllProviders });
-  await waitForElementToBeRemoved(await screen.findByText(/loading/i));
+  await waitForElementToBeRemoved(() => screen.queryByText(/loading/i));
  });
 
  it('should remove the loading indicator if data fetching fails', async () => {
   server.use(http.get('/products', () => HttpResponse.error()));
   render(<ProductList />, { wrapper: AllProviders });
-  await waitForElementToBeRemoved(await screen.findByText(/loading/i));
+  await waitForElementToBeRemoved(() => screen.queryByText(/loading/i));
  });
 });
