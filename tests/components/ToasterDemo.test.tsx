@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import ToastDemo from '../src/components/ToastDemo';
+import ToastDemo from '../../src/components/ToastDemo';
 import { Toaster } from 'react-hot-toast';
 import user from '@testing-library/user-event';
 
